@@ -1,0 +1,47 @@
+<svg width="680" height="200" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+  <title>SharyX OCR — Primary Logo</title>
+  <defs>
+    <linearGradient id="micgrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="micgrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="680" height="200" fill="#0f1120" rx="16"/>
+
+  <!-- Mic mascot -->
+  <g transform="translate(50, 44)">
+    <rect x="10" y="0" width="36" height="52" rx="18" fill="url(#micgrad)"/>
+    <circle cx="21" cy="19" r="3.5" fill="#0f1120"/>
+    <circle cx="35" cy="19" r="3.5" fill="#0f1120"/>
+    <path d="M21 30 Q28 37 35 30" fill="none" stroke="#0f1120" stroke-width="2.8" stroke-linecap="round"/>
+    <rect x="0" y="18" width="5" height="16" rx="2.5" fill="url(#micgrad2)" opacity="0.9"/>
+    <rect x="6" y="14" width="5" height="24" rx="2.5" fill="url(#micgrad2)" opacity="0.7"/>
+    <path d="M8 52 Q8 72 28 72 Q48 72 48 52" fill="none" stroke="url(#micgrad)" stroke-width="4.5" stroke-linecap="round"/>
+    <rect x="18" y="70" width="22" height="6" rx="3" fill="url(#micgrad)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="140" y="118"
+        font-family="-apple-system,'Helvetica Neue',Arial,sans-serif"
+        font-size="58" font-weight="700" fill="white" letter-spacing="-1.5">Shary</text>
+  <text x="360" y="118"
+        font-family="-apple-system,'Helvetica Neue',Arial,sans-serif"
+        font-size="58" font-weight="700" fill="url(#micgrad)" letter-spacing="-1.5">X</text>
+
+  <!-- OCR badge -->
+  <rect x="418" y="74" width="60" height="30" rx="8" fill="#1e2240" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="448" y="95"
+        font-family="-apple-system,sans-serif"
+        font-size="14" font-weight="600" fill="#60A5FA" text-anchor="middle" letter-spacing="2">OCR</text>
+
+  <!-- Tagline -->
+  <text x="140" y="150"
+        font-family="-apple-system,sans-serif"
+        font-size="14" fill="#4a5080" letter-spacing="0.5">Extract · Summarize · Understand</text>
+</svg>

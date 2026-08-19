@@ -1,0 +1,7 @@
+Feature,Primary Model,Provider,Notes
+agent main,Claude Sonnet 4.5 (and variants like Opus for complex tasks),Anthropic,"Core model for building full apps, data analysis tools, dashboards, and most complex work"
+Design Mode,Gemini 3,Google,"Used for rapid visual designs, mockups, and beautiful websites"
+Slide Decks / Presentations,Agent (Claude-based) + React generation,Anthropic + internal,Creates professional presentations from a prompt
+Code Completion (free),replit-code-v1.5-3b,Replit (open-source),Their own smaller code model
+Assistant / quick help,Gemini 1.5 Flash (or similar fast variants),Google,Speed-focused responses
+Your own apps,"GPT, Claude, Gemini, etc.",Multiple,Via Replit AI Integrations

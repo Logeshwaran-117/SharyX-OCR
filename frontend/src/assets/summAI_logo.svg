@@ -1,0 +1,64 @@
+<svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>summAI Document Summarizer Logo</title>
+  <desc>Logo mark with a document icon featuring an AI spark, alongside the summAI wordmark and tagline</desc>
+
+  <!-- Background (white for export) -->
+  <rect width="680" height="400" fill="#ffffff" rx="16"/>
+
+  <!-- ── Document Icon ── -->
+  <g transform="translate(120, 100)">
+    <!-- Document body -->
+    <rect x="0" y="0" width="108" height="136" rx="10" fill="#FAFAFE" stroke="#AFA9EC" stroke-width="2"/>
+
+    <!-- Folded corner fill -->
+    <polygon points="78,0 108,30 78,30" fill="#7F77DD" opacity="0.22"/>
+    <!-- Folded corner crease -->
+    <polyline points="78,0 78,30 108,30" fill="none" stroke="#AFA9EC" stroke-width="1.5"/>
+
+    <!-- Body text lines -->
+    <rect x="14" y="46" width="80" height="7" rx="3.5" fill="#C8C5EF"/>
+    <rect x="14" y="62" width="64" height="7" rx="3.5" fill="#C8C5EF"/>
+    <rect x="14" y="78" width="72" height="7" rx="3.5" fill="#C8C5EF"/>
+    <rect x="14" y="94" width="48" height="7" rx="3.5" fill="#C8C5EF"/>
+    <rect x="14" y="110" width="56" height="7" rx="3.5" fill="#C8C5EF"/>
+
+    <!-- AI Spark overlay -->
+    <circle cx="54" cy="68" r="26" fill="#7F77DD" opacity="0.10"/>
+    <circle cx="54" cy="68" r="20" fill="#534AB7" opacity="0.16"/>
+    <!-- Lightning bolt shape -->
+    <polygon points="60,50 50,66 58,66 48,86 62,69 54,69 64,50" fill="#534AB7"/>
+  </g>
+
+  <!-- ── Wordmark ── -->
+  <!-- Primary name -->
+  <text x="258" y="160"
+        font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-size="52" font-weight="700" letter-spacing="-1"
+        fill="#26215C">summ</text>
+
+  <!-- AI badge -->
+  <rect x="430" y="118" width="50" height="30" rx="8" fill="#7F77DD"/>
+  <text x="455" y="140"
+        font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1"
+        fill="#ffffff">AI</text>
+
+  <!-- Dot accent -->
+  <circle cx="494" cy="148" r="4" fill="#7F77DD" opacity="0.45"/>
+
+  <!-- Subtitle -->
+  <text x="258" y="196"
+        font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-size="18" font-weight="500" letter-spacing="2"
+        fill="#534AB7">DOCUMENT SUMMARIZER</text>
+
+  <!-- Divider -->
+  <rect x="258" y="212" width="300" height="1.5" rx="1" fill="#7F77DD" opacity="0.2"/>
+
+  <!-- Tagline -->
+  <text x="258" y="238"
+        font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-size="13" font-weight="400" letter-spacing="0.5"
+        fill="#7F77DD">Understand more. Read less.</text>
+
+</svg>
