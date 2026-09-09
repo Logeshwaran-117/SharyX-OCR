@@ -10,10 +10,20 @@ const GA_MEASUREMENT_ID = "G-PKH1Z7F27E";
  */
 export const trackGAPageView = (path, title = document.title) => {
   if (typeof window.gtag === "function") {
+    const fullUrl = window.location.origin + path;
+    
+    // 1. Update the page context for the measurement ID
+    window.gtag("config", GA_MEASUREMENT_ID, {
+      page_path: path,
+      page_title: title,
+      page_location: fullUrl,
+    });
+
+    // 2. Explicitly dispatch the page_view event for the timeline stream
     window.gtag("event", "page_view", {
       page_path: path,
-      page_location: window.location.href,
       page_title: title,
+      page_location: fullUrl,
     });
   }
 };
