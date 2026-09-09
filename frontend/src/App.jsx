@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Auth from "./pages/Auth";
 import api from "./api";
@@ -8,6 +8,20 @@ import { ToastProvider } from "./components/toastProvider";
 import { NotificationProvider } from "./context/NotificationContext";
 import LandingPage from "./pages/LandingPage";
 import SharedSummaryPage from "./pages/SharedSummaryPage";
+import { trackGAPageView, setGAUser } from "./services/analytics";
+
+/**
+ * Tracks route changes in Single Page App for Google Analytics 4
+ */
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackGAPageView(location.pathname + location.search);
+  }, [location]);
+
+  return null;
+}
 
 function App() {
   const [summary, setSummary] = useState("");
@@ -22,10 +36,18 @@ function App() {
       .then((res) => {
         setIsAuthenticated(true);
         setUser(res.data.user);
+        setGAUser(res.data.user);
       })
       .catch(() => setIsAuthenticated(false))
       .finally(() => setLoading(false));
   }, []);
+
+  // Update GA user properties whenever user state changes (e.g. after login/signup)
+  useEffect(() => {
+    if (user) {
+      setGAUser(user);
+    }
+  }, [user]);
 
   if (loading) {
     return (
@@ -40,6 +62,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <AnalyticsTracker />
       <NotificationProvider>
         <ToastProvider />
         <div className="h-screen w-full">

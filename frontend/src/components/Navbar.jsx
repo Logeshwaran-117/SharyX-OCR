@@ -11,6 +11,7 @@ import {
 import api from "../api";
 import NotificationCenter from "./NotificationCenter";
 import KeyboardShortcutsModal from "./KeyboardShortcutsModal";
+import { clearGAUser } from "../services/analytics";
 
 const BREADCRUMB_MAP = {
   "/":               "Overview",
@@ -418,6 +419,7 @@ function Navbar({ setIsAuthenticated, user }) {
 
   const handleLogout = async () => {
     try { await api.get("/auth/logout"); } catch {}
+    clearGAUser();
     setIsAuthenticated(false);
     navigate("/login");
   };
